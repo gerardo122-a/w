@@ -429,39 +429,69 @@ body {
 
 .NOSOTROS {
     display: flex;
+    flex-direction: column; /* Coloca los cuadros uno debajo del otro */
     justify-content: center; /* Centra los cuadros horizontalmente */
     align-items: center; /* Centra los cuadros verticalmente */
-    width: 100vw; /* Ocupa todo el ancho del viewport */
-    height: 100vh; /* Ocupa toda la altura del viewport */
-   
-    box-sizing: border-box; /* Incluye el padding en el tamaño total del elemento */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 20px; /* Añade un poco de espacio alrededor */
 }
 
-.cuadro{
-    width: 100%; /* Ancho fijo para los cuadros */
-    height: 100%; /* Alto fijo para los cuadros */
+.cuadro {
     display: flex;
-    justify-content: center; /* Centra el contenido dentro del cuadro */
+    flex-direction: row; /* Coloca el contenido de cada cuadro en una fila */
+    justify-content: space-between; /* Espacio entre el texto y la imagen */
     align-items: center; /* Centra el contenido verticalmente */
-   
+    margin-bottom: 30px; /* Espacio entre los cuadros */
+    background-color: #f4f4f4; /* Fondo de los cuadros */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional para los cuadros */
-    background-color: #f4f4f4; /* Fondo opcional para los cuadros */
-   
+    padding: 20px; /* Espacio interior del cuadro */
+    width: 100%; /* Hace que el cuadro ocupe todo el ancho disponible */
+}
+
+.mision, .vision {
+    display: flex;
+    flex-direction: row; /* Organiza el contenido de Misión y Visión en fila */
+    width: 100%; /* Hace que cada sección ocupe todo el ancho disponible */
+    justify-content: space-between; /* Alinea el texto y la imagen */
+    align-items: center; /* Alinea verticalmente el contenido */
+}
+
+.mision-texto, .vision-texto {
+    flex: 1; /* Hace que el texto ocupe la mitad del espacio disponible */
+    padding-right: 20px; /* Espacio entre el texto y la imagen */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.mision-imagen, .vision-imagen {
+    flex: 1; /* Hace que la imagen ocupe la mitad del espacio disponible */
+    text-align: center; /* Centra la imagen */
+}
+
+.mision-imagen img, .vision-imagen img {
+    width: 100%; /* La imagen ocupa todo el ancho disponible en su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionar */
+    border-radius: 8px; /* Opcional: bordes redondeados para las imágenes */
 }
 
 .cuadro h2, .cuadro h3, .cuadro p {
-    margin:0; /* Elimina el margen predeterminado */
-    padding: 30px 40px; /* Espacio vertical entre elementos */
-    text-align: center; /* Centra el texto dentro del elemento */
-    font-family: 'Retroica', sans-serif;
+    margin: 0; /* Elimina márgenes predeterminados */
+    padding: 10px 20px; /* Espacio vertical entre los elementos */
+    font-family: 'Retroica', sans-serif; /* Fuentes personalizadas */
 }
 
+.cuadro h2 {
+    font-size: 24px; /* Tamaño de fuente para el título */
+    text-align: center; /* Centra el título */
+}
 
+.cuadro h3 {
+    font-size: 22px; /* Tamaño de fuente para los subtítulos */
+}
 
-.imagen img {
-    max-width: 100%; /* Ajusta la imagen para que no exceda el ancho del cuadro */
-    max-height: 100%; /* Ajusta la imagen para que no exceda la altura del cuadro */
-    object-fit: cover; /* Ajusta la imagen para cubrir el área del cuadro sin distorsionar */
+.cuadro p {
+    font-size: 16px; /* Tamaño de fuente para el párrafo */
+    line-height: 1.6; /* Mejor legibilidad */
 }
 
 
